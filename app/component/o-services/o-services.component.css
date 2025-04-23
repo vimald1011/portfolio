@@ -1,0 +1,123 @@
+.services .service-item {
+  background-color: #ffffff;
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  position: relative;
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  z-index: 0; /* Set stacking context for the content */
+}
+
+.services .service-item:before {
+  content: "";
+  position: absolute;
+  background: #d43076;
+  inset: 0 0 100% 0;
+  transition: all 0.3s;
+  z-index: -1; /* Keep it behind the content but within the stacking context */
+  pointer-events: none; /* Ensure it doesn't block hover events */
+}
+
+.services .service-item .icon {
+  margin-bottom: 10px;
+}
+
+.services .service-item .icon i {
+  color: #d43076;
+  font-size: 36px;
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.services .service-item h4 a {
+  color: #2c4964;
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item:hover h4 a,
+.services .service-item:hover .icon i,
+.services .service-item:hover p {
+  color: #ffffff; /* Ensure text color changes on hover */
+}
+
+.services .service-item:hover:before {
+  background: #d43076;
+  inset: 0; /* Expand the background on hover */
+  border-radius: 0px;
+}
+
+.service-details .services-list {
+  background-color: #ffffff;
+  padding: 10px 30px;
+  border: 1px solid color-mix(in srgb, #5a656e, transparent 90%);
+  margin-bottom: 20px;
+}
+
+.service-details .services-list a {
+  display: block;
+  line-height: 1;
+  padding: 8px 0 8px 15px;
+  border-left: 3px solid color-mix(in srgb, #5a656e, transparent 70%);
+  margin: 20px 0;
+  color: color-mix(in srgb, #5a656e, transparent 20%);
+  transition: 0.3s;
+}
+
+.service-details .services-list a.active {
+  color: #2c4964;
+  font-weight: 700;
+  border-color: #d43076;
+}
+
+.service-details .services-list a:hover {
+  border-color: #d43076;
+}
+
+.service-details .services-img {
+  margin-bottom: 20px;
+}
+
+.service-details h3 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.service-details h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.service-details p {
+  font-size: 15px;
+}
+
+.service-details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.service-details ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.service-details ul i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: #d43076;
+}

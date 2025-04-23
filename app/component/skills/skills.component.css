@@ -1,0 +1,30 @@
+.progress-section {
+  width: 40vw;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.skill-section {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.progress-bar-wrap-section {
+  height: 10px;
+  background: #e0e0e0;
+}
+
+.progress-bar-section {
+  height: 10px;
+  background-color: #d43076;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  .progress-section {
+    width: 60vw;
+  }
+}

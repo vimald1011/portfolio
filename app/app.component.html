@@ -1,0 +1,54 @@
+<section class="appa" id="home">
+  <!-- <app-home></app-home> -->
+  <app-navbar></app-navbar>
+  <app-hero></app-hero>
+</section>
+<!-- <app-about></app-about> -->
+<section class="appa" id="about">
+  <app-about></app-about>
+</section>
+<section class="appa padding-top" id="skills">
+  <section id="skills" class="skills section container">
+    <h2 class="sree-krushnadevaraya-regular">Skills</h2>
+    <div class="horigental-line"></div>
+    <p class="skill-para">Proficient in JavaScript, HTML, CSS, AngularJS, Node.js, etc.</p>
+
+    <div class="skillSectionApp row skills-content skills-animation">
+      <div class="col-lg-6">
+        <app-skills label="HTML" [value]="75"></app-skills>
+        <app-skills label="CSS" [value]="70"></app-skills>
+        <app-skills label="JavaScript" [value]="75"></app-skills>
+      </div>
+      <div class="col-lg-6">
+        <app-skills label="Node.js" [value]="60"></app-skills>
+        <app-skills label="AngularJS" [value]="70"></app-skills>
+        <app-skills label="MongoDB" [value]="50"></app-skills>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+
+
+<section class="appa" id="resume">
+  <app-resume></app-resume>
+</section>
+
+
+<section class="appa" id="services">
+  <app-o-services></app-o-services>
+</section>
+
+<section class="appa" id="contact">
+  <app-contact></app-contact>
+</section>
+
+<section class="appa" id="footer">
+  <app-footer></app-footer>
+</section>
+<a href="#" (click)="scrollToTop($event)" [class.active]="isScrollTopVisible"
+  class="scroll-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+<router-outlet></router-outlet>

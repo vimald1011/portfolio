@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Niconne&family=Sree+Krushnadevaraya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:ital@0;1&display=swap");
+.horigental-line {
+  width: 5%;
+  height: 2px;
+  background-color: #f90505;
+  margin: 5px 0 20px 0;
+}
+
+.sree-krushnadevaraya-regular {
+  font-family: "Sree Krushnadevaraya", serif;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.padding-top {
+  padding-top: 80px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,135 @@
+.volkhov-regular {
+  font-family: "Volkhov", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (min-width: 1200px) {
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: #ffffff;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    padding: 0 2rem;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 100%;
+  }
+
+  .navmenu ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navmenu ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navmenu ul li a {
+    text-decoration: none;
+    color: #5a656e;
+  }
+
+  .navmenu ul li a:hover {
+    color: #d43076;
+  }
+
+  .navmenu ul li .active {
+    color: #d43076;
+    border-bottom: 2px solid #d43076;
+  }
+
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: lightblue;
+    min-height: 5rem;
+    padding-right: 1rem;
+    position: fixed;
+    overflow-y: visible;
+    z-index: 9999;
+    top: 0;
+  }
+
+  .navmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .nav-list-desktop {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: lightblue;
+    cursor: pointer;
+    z-index: 10000;
+    position: relative;
+  }
+
+  .mobile-nav-toggle-on-click {
+    color: #f23a3a;
+  }
+
+  .nav-list-mobile {
+    list-style: none;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    padding: 10px 30px;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: 0.3s;
+    z-index: 9998;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    width: 95vw;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .nav-list-mobile li {
+    padding: 0.5rem 0;
+  }
+
+  .navmenu ul li a {
+    text-decoration: none;
+    color: #5a656e;
+  }
+
+  .navmenu ul li a:hover {
+    color: #f23a3a;
+  }
+}

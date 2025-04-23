@@ -1,0 +1,109 @@
+<section id="contact" class="contact section padding-top">
+
+
+    <div class="container section-title" data-aos="fade-up">
+        <h2 class="sree-krushnadevaraya-regular">Contact</h2>
+        <div class="horigental-line"></div>
+        <p>Feel free to reach out for collaborations, inquiries, or just to say hello. I'm always excited to connect and
+            explore
+            new opportunities!</p>
+    </div>
+
+    <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+            <div class="col-lg-4">
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <i class="bi bi-geo-alt flex-shrink-0"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Handia Prayagraj Uttar Pradesh</p>
+                    </div>
+                </div>
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                    <i class="bi bi-telephone flex-shrink-0"></i>
+                    <div>
+                        <h3>Call Us</h3>
+                        <p>+91 9415 0585 53</p>
+                    </div>
+                </div>
+
+                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                    <i class="bi bi-envelope flex-shrink-0"></i>
+                    <div>
+                        <h3>Email Us</h3>
+                        <p>vimald1011&#64;gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-8">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="php-email-form" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="row gy-4">
+
+                        <div class="col-md-6">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                formControlName="name" required>
+                            <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                                <small *ngIf="contactForm.get('name')?.errors?.['required']">Name is required.</small>
+                                <small *ngIf="contactForm.get('name')?.errors?.['minlength']">Name must be at least 3
+                                    characters long.</small>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 ">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email"
+                                formControlName="email" required>
+                            <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                                <small *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</small>
+                                <small *ngIf="contactForm.get('email')?.errors?.['email']">Email is not in proper
+                                    formate</small>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <input type="number" class="form-control" name="number" placeholder="Number"
+                                formControlName="number">
+                            <div *ngIf="contactForm.get('number')?.invalid && contactForm.get('number')?.touched">
+                                <small *ngIf="contactForm.get('number')?.errors?.['pattern']">Number pattern is
+                                    invalid</small>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <textarea class="form-control" name="message" rows="6" placeholder="Message"
+                                formControlName="message"></textarea>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+
+                            <button type="submit">Send Message</button>
+                            <!-- <button type="submit" [disabled]="contactForm.invalid">Send Message</button> -->
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <div *ngIf="isLoading" class="col-md-12 text-center">
+                <div class="loading-spinner">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="isSuccess" class="col-md-12 text-center">
+                <div class="alert alert-success" role="alert">
+                    Your message has been sent successfully!
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

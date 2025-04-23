@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Niconne&family=Sree+Krushnadevaraya&display=swap");
+
+.app {
+  min-height: 80vh;
+}
+.horigental-line {
+  width: 5%;
+  height: 2px;
+  background-color: #f90505;
+  margin: 5px 0 20px 0;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillSectionApp {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sree-krushnadevaraya-regular {
+  font-family: "Sree Krushnadevaraya", serif;
+  font-weight: 550;
+  font-style: normal;
+}
+
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99;
+  background-color: #d43076;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, #d43076, transparent 20%);
+  color: #ffffff;
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .scroll-top {
+    width: 35px;
+    height: 35px;
+    right: 2px;
+    bottom: 2px;
+  }
+}

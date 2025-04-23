@@ -1,0 +1,84 @@
+.horigental-line {
+  width: 5%;
+  height: 2px;
+  background-color: #f90505;
+  margin: 5px 0 20px 0;
+}
+
+.about {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+  margin-top: 2.5rem;
+}
+
+.about img {
+  width: 22rem;
+  height: auto;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  height: 18rem;
+}
+
+.about-text h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.niconne-regular {
+  font-family: "Niconne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-details {
+  width: 40rem;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  column-gap: 11rem;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+}
+
+.about-list li {
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.about-list li .bi {
+  color: #f90505;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about-details {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  .about-text {
+    height: auto;
+  }
+
+  .about-details :first-child .about-list {
+    margin-bottom: 0;
+  }
+}

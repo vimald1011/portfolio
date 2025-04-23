@@ -1,0 +1,41 @@
+<div class="nav-bar" id="home">
+    <div class="nav-bar_logo">
+        <!-- <img class="navbar-logo" src="assets/images/bbgroup.jpg" alt="Logo" /> -->
+        <h1 class="sitename playfair-display-heading volkhov-regular">B B Group</h1>
+    </div>
+
+    <nav #navbar class="navmenu">
+        <!-- Mobile toggle icon -->
+        <i *ngIf="isIconShow" class="mobile-nav-toggle bi bi-list" id="vimal" (click)="toggleNavMobile()"
+            [class.mobile-nav-toggle-on-click]="iconToggle">
+        </i>
+        <i *ngIf="!isIconShow" class="mobile-nav-toggle bi bi-x-lg" id="vimal" (click)="toggleNavMobile()"
+            [class.mobile-nav-toggle-on-click]="iconToggle">
+        </i>
+
+        <!-- For mobile: show animated list -->
+        <ul *ngIf="isMobileView" [@slideToggle]="iconToggle ? 'open' : 'closed'"
+            class="navmenu-animated nav-list-mobile" id="navBarList">
+            <li><a href="#home" (click)="onNavItemClick()">Home</a>
+            </li>
+            <li><a href="#about" (click)="onNavItemClick()">About</a>
+            </li>
+            <li><a href="#skills" (click)="onNavItemClick()">Skills</a></li>
+            <li><a href="#resume" (click)="onNavItemClick()">Resume</a></li>
+            <li><a href="#services" (click)="onNavItemClick()">Services</a></li>
+            <li><a href="#contact" (click)="onNavItemClick()">Contact</a></li>
+        </ul>
+
+        <!-- For desktop: always show visible nav -->
+        <ul *ngIf="!isMobileView" class="nav-list-desktop">
+            <li><a [ngClass]="{ 'active': currentSection === 'home' }" href="#home">Home</a></li>
+            <li><a [ngClass]="{ 'active': currentSection === 'about' }" href="#about">About</a></li>
+            <li><a [ngClass]="{ 'active': currentSection === 'skills' }" href="#skills">Skills</a></li>
+            <li><a [ngClass]="{ 'active': currentSection === 'resume' }" href="#resume">Resume</a></li>
+            <li><a [ngClass]="{ 'active': currentSection === 'services' }" href="#services">Services</a></li>
+            <li><a [ngClass]="{ 'active': currentSection === 'contact' }" href="#contact">Contact</a></li>
+        </ul>
+
+
+    </nav>
+</div>
